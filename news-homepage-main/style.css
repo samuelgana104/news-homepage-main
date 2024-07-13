@@ -1,0 +1,243 @@
+:root{
+   --Off_white: hsl(36, 100%, 99%);
+--Grayish_blue: hsl(233, 8%, 79%);
+--Dark_grayish_blue: hsl(236, 13%, 42%);
+--Very_dark_blue: hsl(240, 100%, 5%);
+--Soft_orange: hsl(35, 77%, 62%);
+--Soft_red: hsl(5, 85%, 63%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family:"Inter" ,sans-serif;
+}
+body{
+    color: var(--Dark_grayish_blue);
+    margin: 20px;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 30px;
+
+}
+.menu,.close{
+    display: none;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+
+}
+li{
+    text-transform: capitalize;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 400;
+
+}
+li:hover{
+    color: var(--Soft_red);
+}
+.body{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 30px;
+    height: 100%;
+    gap: 20px;
+}
+.b-left {
+   height: 100%;
+}
+.b-left img{
+    width: 100%;
+}
+.detail{
+    display: flex;
+    padding: 20px 0;
+    height: 100%;
+}
+.detail h1{
+    text-transform: capitalize;
+    padding-right: 10px;
+    font-size: 4em;
+    
+}
+.detail p{
+    font-size: 15px;
+    line-height: 20px;
+}
+.para{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+button{
+    padding: 15px 0;
+    width: 200px;
+    background-color: var(--Soft_red);
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--Off_white);
+    letter-spacing: 5px;
+    cursor: pointer;
+    margin-top: 2em;
+    
+
+}
+button:hover,button:active{
+    background-color: var(--Dark_grayish_blue);
+}
+.b-right {
+     width: 60%;
+     background-color: var(--Dark_grayish_blue);
+     color: hsl(36, 100%, 99%);
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+.b-right .new {
+    text-transform: uppercase;
+    color: var(--Soft_orange);
+    padding: 10px 0;
+    font-size: 2em;
+    
+}
+.new-li{
+    padding: 30px 0;
+    position: relative;
+}
+.new-li::after{
+    content: '';
+    position: absolute;
+    background: var(--Off_white);
+    width: 95%;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.new-li h3{
+    text-transform: capitalize;
+    font-weight: 700;
+    margin:0 0  10px 0;
+    cursor: pointer;
+}
+.new-li h3:hover,.new-li h3:active{
+    color: var(--Soft_orange);
+}
+.new-li p{
+    font-size: 15px;
+    line-height: 22px;
+}
+.slides{
+    display: flex;
+    padding: 5em 30px;
+    justify-content: space-between;
+    
+}
+.slide{
+    padding: 0 20px;
+    width: 450px;
+    display: flex;
+    height: 150px;
+    gap: 20px;
+}
+.slide img{
+    height: 100%;
+}
+.slide-info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.slide-info h2{
+    opacity: .5;
+    font-size: 2.5em;
+}
+.slide-info h3{
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--Very_dark_blue);
+}
+.slide-info p {
+    font-weight: 500;
+    line-height: 2em;
+}
+@media  (max-width : 720px) {
+    
+    
+    li{
+        font-weight: 600;
+        margin-left: 2em;
+    }
+    .men {
+        display: none;
+    }
+    .men.hey{
+        display: block;
+    }
+    .men  ul{
+        top: 0px;
+        display: flex ;
+        flex-direction: column;
+        position: relative;
+       align-items: flex-start;
+       justify-content: center;
+       height: 100%;
+        position: absolute;
+        background-color: var(--Off_white);
+        height: 100vh;
+        
+        right: 0;
+        width: 60%;
+    }
+    .menu  , .close {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 30px;
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+    }
+    .detail{
+        display: flex;
+        flex-direction: column;
+    }
+    .para {
+        margin: 0;
+
+    }
+    .para p{
+        line-height: 2em;
+        
+    }
+    .b-right{
+        width: 100%;
+    }
+    .new-li h3 {
+        font-size: 1.5em;
+    }
+    .new-li p{
+        font-size: 1.2em;
+    }
+    .slides{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+}
