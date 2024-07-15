@@ -1,0 +1,392 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+ --Black: hsl(0, 0%, 0%);
+ --Dark_Gray: hsl(0, 0%, 55%);
+ --Very_Dark_Gray: hsl(0, 0%, 41%);
+}
+body{
+    
+}
+.top{
+    background: url("desktop/image-hero.jpg" );
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    padding :30px;
+    color: var(--White);
+}
+.close,.open{
+    display: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header nav, .f-down nav {
+    display: flex;
+    list-style-type: none;
+}
+
+.header nav li  , .f-down nav li{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    text-transform: capitalize;
+    cursor: pointer;
+    letter-spacing: 2px;
+    border-bottom: 2px solid transparent;
+
+
+}
+.header nav li:active , .header nav li:hover {
+    border-bottom: #fff 2px solid;
+    font-weight: 700;
+    transition: 1s;
+}
+.top p {
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    font-size: 2em;
+    width: 350px;
+    padding: 20px;
+    margin: 70px 0;
+}
+.body{
+    padding: 50px;
+    display: flex;
+    position: relative;
+
+}
+.body img {
+    width: 750px;
+}
+.content{
+    width: 550px;
+    position: absolute;
+    bottom: 0;
+    right: 250px;
+    padding: 60px;
+    background-color: var(--White);
+    margin: 50px 0;
+}
+.content h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 20px;;
+}
+.content p {
+    color : var(--Dark_Gray);
+    font-size: 15px;
+    line-height: 20px;
+}
+.creation{
+    padding: 60px;
+}
+.info {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.info h1 {
+    font-size: 2.4em;
+    text-transform: uppercase;
+}
+.info button {
+    text-transform: uppercase;
+    width: 150px;
+    letter-spacing: 6px;
+    border: 2px solid var(--Very_Dark_Gray);
+    background-color: var(--White);
+    font-weight: 400;
+    cursor: pointer;
+}
+.info button:hover, .info button:active{
+    background-color: var(--Black);
+    color: var(--White);
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    row-gap: 20px;
+    color: #fff;
+    
+
+}
+.butt{
+    cursor: pointer;
+    height: 450px;
+    width: 256px;
+}
+.grid .butt:active,.grid .butt:hover{
+   
+}
+
+.grid .butt p{
+    font-size: 3em;
+    text-transform: uppercase;
+    padding: 20px;
+    
+    position: absolute;
+    bottom: 0;
+}
+.grid .butt:nth-child(1){
+    background: url("desktop/image-deep-earth.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    
+}
+.grid .butt:nth-child(2){
+    background: url("desktop/image-night-arcade.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    
+}
+.grid .butt:nth-child(3){
+    background: url("desktop/image-soccer-team.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    
+}
+.grid .butt:nth-child(4){
+    background: url("desktop/image-grid.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    
+}
+.grid .butt:nth-child(5){
+    background: url("desktop/image-from-above.jpg");
+    position: relative; background-size: cover;
+    background-position: center;
+    
+}
+
+.grid .butt:nth-child(6){
+    background: url("desktop/image-pocket-borealis.jpg");
+    position: relative; background-size: cover;
+    background-position: center;
+    
+}
+.grid .butt:nth-child(7){
+    background: url("desktop/image-curiosity.jpg");
+    position: relative; background-size: cover;
+    background-position: center;
+    
+}
+.grid .butt:nth-child(8){
+    background: url("desktop/image-fisheye.jpg");
+    position: relative; background-size: cover;
+    background-position: center;
+
+}
+.footer {
+    background-color: var(--Black);
+    height: fit-content;
+    padding:10px 60px ;
+    color: white;
+
+}
+.f-top{flex-wrap: wrap;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+
+}
+.social img{
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+.f-down
+{margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.f-top nav li{
+    display: flex;
+
+    align-items: center;
+    margin: 0 15px 0 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    
+    font-size: 15px;
+
+
+}
+.f-down p{
+    font-size: 12px;
+    color: var(--Dark_Gray);
+}
+@media (max-width : 720px ) {
+    .top{
+        background: url("mobile/image-hero.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .img {
+        position: absolute;
+        z-index: 999;
+        
+    }
+    .nav{
+      
+        display: none ;
+    }
+    .nav.mode{
+        display: block;
+    }
+    .nav nav{
+        background-color: #000;
+        height: 100vh;
+        
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+       
+        
+    }
+    .nav nav li {
+        text-transform: uppercase;
+        margin: 10px 30px;
+        border: none;
+    }
+    .header nav li:active , .header nav li:hover{
+        border: none;
+    }
+    .close,.open{
+        cursor: pointer;
+        display: block;
+        width: max-content;
+        height: max-content;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    .top p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    #interactive{
+        width: 100%;
+    }
+    .body{
+        
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 30px;
+        
+    }
+    .content{
+        width: 100%;
+        text-align: center;
+        position: unset;
+        
+        
+    }
+    .content h1{
+        font-size: 2.5em;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .grid .butt {
+        width:100% ;
+         height: 200px;
+
+    }
+    .grid .butt:nth-child(1){
+        background: url("mobile/image-deep-earth.jpg");
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .grid .butt:nth-child(2){
+        background: url("mobile/image-night-arcade.jpg");
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .grid .butt:nth-child(3){
+        background: url("mobile/image-soccer-team.jpg");
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .grid .butt:nth-child(4){
+        background: url("mobile/image-grid.jpg");
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .grid .butt:nth-child(5){
+        background: url("mobile/image-deep-earth.jpg");
+        position: relative; background-size: cover;
+        background-position: center;
+        
+    }
+    
+    .grid .butt:nth-child(6){
+        background: url("mobile/image-pocket-borealis.jpg");
+        position: relative; background-size: cover;
+        background-position: center;
+        
+    }
+    .grid .butt:nth-child(7){
+        background: url("mobile/image-curiosity.jpg");
+        position: relative; background-size: cover;
+        background-position: center;
+        
+    }
+    .grid .butt:nth-child(8){
+        background: url("mobile/image-fisheye.jpg");
+        position: relative; background-size: cover;
+        background-position: center;
+    
+    }
+    .f-top, .f-down{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .f-top nav li, .social{
+        margin: 20px 0;
+        font-size: 20px;
+    }
+    .f-top img{
+        margin: 10px 0;
+
+    }
+    .f-down p{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+}
