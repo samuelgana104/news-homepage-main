@@ -7,4 +7,5 @@ Desktop view
 
 
 Moblie view
-![Uploading mobile-design.jpg…]()
+
+![mobile-design](https://github.com/user-attachments/assets/1fbd97de-4aeb-4e9d-9569-5d13d98f28a5)
